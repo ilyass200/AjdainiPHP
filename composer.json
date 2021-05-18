@@ -1,0 +1,26 @@
+{
+    "name": "ab/ajdaini-php",
+    "description": "The AjdainiPHP framework",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "ilyass",
+            "email": "ajdainibac@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "config": {
+        "vendor-dir": "vendor"
+    },
+    "require": {
+        "twig/twig": "^3.0",
+        "vlucas/phpdotenv": "^5.3"
+    }
+    ,
+    "autoload":
+    {
+        "psr-4":{
+            "AjdainiPHP\\": "src/"
+        }
+    }
+}
