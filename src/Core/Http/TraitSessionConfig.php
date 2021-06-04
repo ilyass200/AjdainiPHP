@@ -36,7 +36,7 @@ trait TraitSessionConfig
 
         if(is_dir($dir))
         {
-            $this->session_path = $dir;
+            $this->setSessionPath = $dir;
         }
         else
         {

@@ -55,19 +55,19 @@ class Database
 	*
     * @return object result of the query request
     */
-	public function request(string $query,array $exec = NULL,Entity $class = NULL): \PDO
+	public function request(string $query,array $exec = NULL,$class = NULL)
 	{	
 		$pdo = $this->getConnection();
-
 		if ($exec === NULL) {
+
 			$query = $pdo->query($query);
 
 			if ($class) {
-				$query->setFetchMode(\PDO::FETCH_CLASS,get_class($class));
+				$query->setFetchMode(\PDO::FETCH_CLASS,$class);
 			}
 
-			if ($query->rowCount() > 1) {
-				return $query->fetchAll();
+			if ($query->rowCount() > 1) { 
+				return $query;
 			}
 
 			return $query->fetch();
@@ -77,7 +77,7 @@ class Database
 		$query->execute($exec);
 
 		if ($class) {
-			$query->setFetchMode(\PDO::FETCH_CLASS,get_class($class));
+			$query->setFetchMode(\PDO::FETCH_CLASS,$class);
 		}
 
 		if ($query->rowCount() > 1) {

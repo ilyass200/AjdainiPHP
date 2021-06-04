@@ -75,6 +75,7 @@ trait CRUDtrait
     public function find(int $id)
     {
       $connection = $this->getConnection();  
+      
       $table = $this->getTableName();
       $primaryKey = $this->primary_key;
 

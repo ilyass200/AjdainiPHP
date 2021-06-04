@@ -10,6 +10,7 @@ $_TEMPLATE::end();
 
 $_TEMPLATE::start('body'); 
 
+echo "<p>Welcome to the first version of the AjdainiPHP Framework !</p>";
 
 $_TEMPLATE::end();
 

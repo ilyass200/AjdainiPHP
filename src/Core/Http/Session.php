@@ -69,9 +69,6 @@ class Session
         $this->init();                                                         
         session_start();
         
-        $this->secure_session = true;
-        $session = $this->getSessionName();
-        $cookie_name = $this->getSecurityCookieName();
         $session_name = $this->getSessionName();
 
         if(!isset($_COOKIE[$cookie_name]) or !isset($_SESSION[$cookie_name]))
