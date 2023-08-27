@@ -9,7 +9,7 @@ Before importing our framework into your machine, please be sure to install and 
 * Have a PHP version [7.3](https://www.php.net/downloads.php) or higher
 
 ## Installing dependencies 
-With the file ``compose.json`` it will give you all the necessary dependencies to run the site, first place yourself in the root directory, then run the following command:
+With the file ``composer.json`` it will give you all the necessary dependencies to run the site, first place yourself in the root directory, then run the following command:
 
 * ``composer install`` (it should normally install a ``vendor`` folder)
 
@@ -30,7 +30,7 @@ CREATE TABLE sample_db.sample
 
 ## How is our Framework structured ?
 
-First of all in the root of the folder you will find the file ``compose.json`` which returns in json form all the packages used by our framework. It is also through this file that you were able to install in a single command the packages necessary to run our framework. You will also find an ``.env`` file allowing you to insert environment constants to be referred to from the different configurations of the project. There are generally some sensitive variables that should not be seen by anyone, that's why it's advisable to ignore this file by inserting it in the ``.gitignore`` file before your GIT repository and to provide an ``.env.sample`` file (the filename is just an example) where you define the same environment variables with fictitious values so that another developer doesn't have to guess them by himself. We have provided an ``.env`` file where you will find environment variables that are used to connect to the database so you have to insert your informations first. Normally after running the requested commands you will find a /vendor folder where it has all the necessary packages to run the Framework. So in the /src folder you will find all the classes that are part of the AjdainiPHP Framework.
+First of all in the root of the folder you will find the file ``composer.json`` which returns in json form all the packages used by our framework. It is also through this file that you were able to install in a single command the packages necessary to run our framework. You will also find an ``.env`` file allowing you to insert environment constants to be referred to from the different configurations of the project. There are generally some sensitive variables that should not be seen by anyone, that's why it's advisable to ignore this file by inserting it in the ``.gitignore`` file before your GIT repository and to provide an ``.env.sample`` file (the filename is just an example) where you define the same environment variables with fictitious values so that another developer doesn't have to guess them by himself. We have provided an ``.env`` file where you will find environment variables that are used to connect to the database so you have to insert your informations first. Normally after running the requested commands you will find a /vendor folder where it has all the necessary packages to run the Framework. So in the /src folder you will find all the classes that are part of the AjdainiPHP Framework.
 
 ### Controller
 By using the controllers you can focus on the logic of your code without having to merge with the code of your view. You could analyze your data and make modifications, manage the requests of the page made by the user, manage the access rights, ... 
